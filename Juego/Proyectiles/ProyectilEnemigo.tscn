@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Juego/Proyectiles/Proyectil.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TemporalAssets/PNG/Lasers/laserGreen10.png" type="Texture" id=2]
+
+[node name="ProyectilEnemigo" instance=ExtResource( 1 )]
+z_index = 39
+collision_layer = 16
+collision_mask = 5
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 0.689441, 0.87793, 0.623296, 1 )
+scale = Vector2( 1.11234, 0.873354 )
+texture = ExtResource( 2 )
+
+[node name="VisibilityNotifier2D" parent="." index="2"]
+visible = false
