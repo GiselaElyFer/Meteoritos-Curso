@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/explosionsfx.ogg-28ccfaf657b6df273273664254fa2e15.oggstr"
+
+[deps]
+
+source_file="res://Juego/ExplosionTercero/explosionsfx.ogg"
+dest_files=[ "res://.import/explosionsfx.ogg-28ccfaf657b6df273273664254fa2e15.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
