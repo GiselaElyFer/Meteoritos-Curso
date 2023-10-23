@@ -21,6 +21,7 @@ onready var estela:Estela = $EstelaPuntoInicio/Trail2D
 onready var motor_sfx:Motor = $MotorSFX
 onready var colisionador:CollisionShape2D = $CollisionShape2D
 onready var impacto_nave = $ImpactoSFX
+onready var escudo:Escudo = $Escudo
 
 
 #func _ready() -> void:
@@ -43,6 +44,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		motor_sfx.sonido_on()
 	if(event.is_action_released("mover_adelante") or event.is_action_released("mover_atras")):
 		motor_sfx.sonido_off()
+	if event.is_action_pressed("escudo") and not escudo.get_esta_activado():
+		escudo.activar()
 
 
 func controlador_estados(nuevo_estado: int) -> void:
@@ -113,6 +116,7 @@ func recibir_danio(danio: float) ->void:
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "spawn":
 		controlador_estados(ESTADO.VIVO)
+
 
 func destruir() -> void:
 	controlador_estados(ESTADO.MUERTO)

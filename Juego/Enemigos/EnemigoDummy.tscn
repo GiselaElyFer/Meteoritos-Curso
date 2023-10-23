@@ -8,7 +8,7 @@
 [ext_resource path="res://Juego/Sfx/disparo.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29, 29 )
+extents = Vector2( 61, 60 )
 
 [node name="EnemigoDummy" type="Node2D"]
 script = ExtResource( 2 )
